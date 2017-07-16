@@ -34,8 +34,8 @@ ADD db_scripts/dbobjects/cfg/tables/users.sql /docker-entrypoint-initdb.d/
 #ADD db_scripts/dbobjects/cfg/functions/get_users.sql /docker-entrypoint-initdb.d/
 ADD db_scripts/dbobjects/cfg/sequences/seq_users.sql /docker-entrypoint-initdb.d/
 
-ADD db_scripts/dbobjects/cfg/tables/users_customers.sql /docker-entrypoint-initdb.d/
-ADD db_scripts/dbobjects/cfg/views/w_users.sql /docker-entrypoint-initdb.d/
+#ADD db_scripts/dbobjects/cfg/tables/users_customers.sql /docker-entrypoint-initdb.d/
+#ADD db_scripts/dbobjects/cfg/views/w_users.sql /docker-entrypoint-initdb.d/
 
 #Creating DB objects in trn schema
 #------------------------------------------------------------------------------------
