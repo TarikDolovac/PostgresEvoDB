@@ -17,15 +17,15 @@ Instructions below will get you a copy of the project up and running on your loc
 
 For local purposes of development and testing, I recommmend using Vagrant and Virtualbox. Before installing Vagrant on your local machine please download virtualbox. 
 
-*Virtual box can be downloaded from:*
+* Virtual box can be downloaded from: *
 https://www.virtualbox.org/wiki/Downloads
 
-*Vagrant will be installed per insturction below:* 
+* Vagrant will be installed per insturction below: * 
 * Create folder: mkdir vagrant
 * Run command in terminal from created folder: vagrant init ubuntu/xenial64 (you can use some other version of ubuntu image, but I recommend using latest one)
 
 After you download all neccessary software you can easily run your virtual environment with command: 
-* vagrant up
+```vagrant up```
 
 More detailed instructions regarding vagrant and virtualbox can be find at: 
 https://drupalize.me/videos/installing-vagrant-and-virtualbox?p=1526
@@ -43,23 +43,30 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
 
 Commands below will tell you how to get a development env up & running
 
-*Run docker for creating image from the Dockerfile. You can specify any name (for example: postgresevodb)
+* Run docker for creating image from the Dockerfile. You can specify any name (for example: postgresevodb)
+
 ```docker build -t ${IMAGE_NAME} .```
 
-*(OPTIONAL) Check that your image is created
+* (OPTIONAL) Check that your image is created
+
 ```docker images```
 
-*To create docker container from this image run:
-```docker run --name ${CONTAINER_NAME} -d -p ${PORT_ON_LOCAL_MACHINE}:${PORT_INSIDE_CONTAINER} ${IMAGE_NAME}````
+* To create docker container from this image run:
+
+```docker run --name ${CONTAINER_NAME} -d -p ${PORT_ON_LOCAL_MACHINE}:${PORT_INSIDE_CONTAINER} ${IMAGE_NAME}```
+
 where ${PORT_ON_LOCAL_MACHINE} and ${PORT_INSIDE_CONTAINER} are needed if you want to enable port forwarding between host machine and container (good scenario where you will need this is if you want to access postgres database using postgres client installed on your machine)
 
-*(OPTIONAL) Check logs for starting the container:
+* (OPTIONAL) Check logs for starting the container:
+
 ```docker logs -f ${CONTAINER_NAME}```
 
-*Check does your container up & running:
+* Check does your container up & running:
+
 ```docker ps -a```
 
-*To connect from your host machine (Vagrant, ec2...etc.) to this docker container, you can use following command:
+* To connect from your host machine (Vagrant, ec2...etc.) to this docker container, you can use following command:
+
 ```apt-get install postgres-client``` (if you don't have one)
 ```PGPASSWORD=postgres psql -h ${HOST_IP_ADDRESS} -p ${PORT_ON_LOCAL_MACHINE} -U docker```
 
