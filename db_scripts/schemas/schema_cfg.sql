@@ -1,1 +1,1 @@
-CREATE SCHEMA IF NOT EXISTS cfg authorisation docker;
+CREATE SCHEMA IF NOT EXISTS cfg AUTHORIZATION docker;
