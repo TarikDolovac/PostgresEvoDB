@@ -45,31 +45,31 @@ Commands below will tell you how to get a development env up & running
 
 * Run docker for creating image from the Dockerfile. You can specify any name (for example: postgresevodb)
 
-```docker build -t ${IMAGE_NAME} .```
+  ```docker build -t ${IMAGE_NAME} .```
 
 * (OPTIONAL) Check that your image is created
 
-```docker images```
+  ```docker images```
 
 * To create docker container from this image run:
 
-```docker run --name ${CONTAINER_NAME} -d -p ${PORT_ON_LOCAL_MACHINE}:${PORT_INSIDE_CONTAINER} ${IMAGE_NAME}```
+  ```docker run --name ${CONTAINER_NAME} -d -p ${PORT_ON_LOCAL_MACHINE}:${PORT_INSIDE_CONTAINER} ${IMAGE_NAME}```
 
 where ${PORT_ON_LOCAL_MACHINE} and ${PORT_INSIDE_CONTAINER} are needed if you want to enable port forwarding between host machine and container (good scenario where you will need this is if you want to access postgres database using postgres client installed on your machine)
 
 * (OPTIONAL) Check logs for starting the container:
 
-```docker logs -f ${CONTAINER_NAME}```
+  ```docker logs -f ${CONTAINER_NAME}```
 
 * Check does your container up & running:
 
-```docker ps -a```
+  ```docker ps -a```
 
 * To connect from your host machine (Vagrant, ec2...etc.) to this docker container, you can use following command:
 
-```apt-get install postgres-client``` (if you don't have one)
+  ```apt-get install postgres-client``` (if you don't have one)
 
-```PGPASSWORD=postgres psql -h ${HOST_IP_ADDRESS} -p ${PORT_ON_LOCAL_MACHINE} -U docker```
+  ```PGPASSWORD=postgres psql -h ${HOST_IP_ADDRESS} -p ${PORT_ON_LOCAL_MACHINE} -U docker```
 
 ## Section for update exiting DB
 TBA...
