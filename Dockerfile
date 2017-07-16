@@ -41,7 +41,7 @@ ADD db_scripts/dbobjects/cfg/tables/users_customers.sql /docker-entrypoint-initd
 ADD db_scripts/dbobjects/cfg/views/w_users.sql /docker-entrypoint-initdb.d/w_users.sql
 
 #Inserting data for testing
-ADD data/data_for_testing/customers.sql /docker-entrypoint-initdb.d/4customers.sql
+ADD data/data_for_testing/customers_data.sql /docker-entrypoint-initdb.d/4customers.sql
 
 #Creating DB objects in trn schema
 #------------------------------------------------------------------------------------
