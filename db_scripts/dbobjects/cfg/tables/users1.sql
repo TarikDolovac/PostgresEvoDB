@@ -1,4 +1,4 @@
-create table cfg.users
+create table if not exists cfg.users
 	(
 		userid int
 		,username varchar (55)
