@@ -1,6 +1,3 @@
-#creating table in cfg schema
-#table will contain all users for loging on system
-
 create table if not exist cfg.users
 	(
 		userid int
