@@ -34,11 +34,14 @@ ADD db_scripts/schemas/schema_trn.sql /docker-entrypoint-initdb.d/
 
 
 #Creating DB objects in cfg schema
-ADD db_scripts/dbobjects/cfg/tables/users.sql /docker-entrypoint-initdb.d/users1.sql
-ADD db_scripts/dbobjects/cfg/functions/users_get.sql /docker-entrypoint-initdb.d/users2_get.sql
+ADD db_scripts/dbobjects/cfg/tables/users.sql /docker-entrypoint-initdb.d/1users.sql
+ADD db_scripts/dbobjects/cfg/functions/users_get.sql /docker-entrypoint-initdb.d/2users_get.sql
 ADD db_scripts/dbobjects/cfg/sequences/seq_users.sql /docker-entrypoint-initdb.d/
-ADD db_scripts/dbobjects/cfg/tables/users3_customers.sql /docker-entrypoint-initdb.d/users3_customers.sql
+ADD db_scripts/dbobjects/cfg/tables/users_customers.sql /docker-entrypoint-initdb.d/3users_customers.sql
 ADD db_scripts/dbobjects/cfg/views/w_users.sql /docker-entrypoint-initdb.d/w_users.sql
+
+#Inserting data for testing
+ADD data/data_for_testing/customers.sql /docker-entrypoint-initdb.d/4customers.sql
 
 #Creating DB objects in trn schema
 #------------------------------------------------------------------------------------
