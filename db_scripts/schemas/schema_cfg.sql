@@ -1,1 +1,1 @@
-create schema cfg;
+CREATE SCHEMA IF NOT EXISTS cfg authorisation docker;
