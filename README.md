@@ -68,9 +68,10 @@ where ${PORT_ON_LOCAL_MACHINE} and ${PORT_INSIDE_CONTAINER} are needed if you wa
 * To connect from your host machine (Vagrant, ec2...etc.) to this docker container, you can use following command:
 
 ```apt-get install postgres-client``` (if you don't have one)
+
 ```PGPASSWORD=postgres psql -h ${HOST_IP_ADDRESS} -p ${PORT_ON_LOCAL_MACHINE} -U docker```
 
-# Section for update exiting DB
+## Section for update exiting DB
 TBA...
 
 **Author**
