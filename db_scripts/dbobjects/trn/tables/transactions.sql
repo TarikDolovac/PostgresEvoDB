@@ -1,7 +1,7 @@
 create table if not exists trn.transaction
 	(
-		transaction_id int set default nextval('trn.seq_transactions')
+		transaction_id int default nextval('trn.seq_transactions')
 		,user_id int not null
-		,create_date date set default (now())
+		,create_date date default (now())
 		,documnet_id int
  		);
