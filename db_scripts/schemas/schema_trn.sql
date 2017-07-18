@@ -1,1 +1,1 @@
-create schema trn;
+create schema CREATE SCHEMA IF NOT EXISTS trn AUTHORIZATION docker;

@@ -1,0 +1,1 @@
+Create sequence trn.seq_transactions start 1;

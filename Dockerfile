@@ -20,8 +20,8 @@ ENV POSTGRES_DB docker
 #------------------------------------------------------------------------------------
 #IMPORTANT after adding /docker-entrypoint-initdb.d/ part of path you have to set order of script execution by number
 #example
-#/docker-entrypoint-initdb.d/${script_name1}.sql
-#/docker-entrypoint-initdb.d/${script_name2}.sql
+#/docker-entrypoint-initdb.d/1${script_name}.sql
+#/docker-entrypoint-initdb.d/2${script_name}.sql
 
 
 
@@ -45,3 +45,7 @@ ADD data/data_for_testing/customers_data.sql /docker-entrypoint-initdb.d/5custom
 
 #Creating DB objects in trn schema
 #------------------------------------------------------------------------------------
+ADD db_scripts/dbobjects/trn/sequences/seq_transactions.sql /docker-entrypoint-initdb.d/1seq_transactions.sql
+ADD db_scripts/dbobjects/trn/tables/transactions.sql /docker-entrypoint-initdb.d/2transactions.sql
+
+
