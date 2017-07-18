@@ -46,6 +46,6 @@ ADD data/data_for_testing/customers_data.sql /docker-entrypoint-initdb.d/5custom
 #Creating DB objects in trn schema
 #------------------------------------------------------------------------------------
 ADD db_scripts/dbobjects/trn/sequences/seq_transactions.sql /docker-entrypoint-initdb.d/1seq_transactions.sql
-ADD db_scripts/dbobjects/trn/tables/transactions.sql /docker-entrypoint-initdb.d/2transactions.sql
+#ADD db_scripts/dbobjects/trn/tables/transactions.sql /docker-entrypoint-initdb.d/2transactions.sql
 
 
